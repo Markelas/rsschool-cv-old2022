@@ -63,6 +63,11 @@ html {
     background: #6d7d85;
     min-height: 86px;
 }
+@media(max-width:636px){
+    .header__container{
+        min-height: 40px;
+    }
+}
 .navigation__container {
     
 }
@@ -72,6 +77,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+@media(max-width:636px){
+    .menu{
+        display: none;
+    }
 }
 .menu__list {
     margin: 18px 0px;
@@ -148,6 +158,11 @@ html {
     padding-bottom: 45px;
     width: calc(50% - 20px);
 }
+@media(max-width:806px){
+    .section{
+        width: 100%;
+    }
+}
 .section-title {
     color: #6d7d85;
     margin: 20px 0px;
@@ -172,22 +187,22 @@ html {
 /*-----*/
 .section-title {
 }
-.pre {
+.code {
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
+    white-space: pre-wrap;
   }
-code {
 
-        padding: 0;
-        margin: 0;
-
-}
 /*----*/
 #English { 
     border-bottom: 0px; 
 }
-#Education { 
-    border-bottom: 0px; 
+@media(min-width:806px){
+    #Education { 
+        border-bottom: 0px; 
+    }
 }
 /*----*/
 .footer__mine {
