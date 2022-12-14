@@ -9,6 +9,7 @@
 }
 a {
     text-decoration: none;
+    color: black;
 }
 ul,
 ol,
@@ -35,7 +36,29 @@ body {
 	font-size: 18px;
 	font-weight: 400;
 	font-family: 'Roboto', sans-serif, 'Roboto Mono', monospace;
+    background: 
+    linear-gradient(135deg, #f3f3f3 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #f5feff 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #f7feff 25%, transparent 25%),
+    linear-gradient(45deg, #f7feff 25%, transparent 25%);	
+    background-size: 20px 20px;
+    background-color: #f7feff;
 
+    /* Animation defaults to a .3s loop */
+        -webkit-animation: backgroundAnimate 9s linear infinite;
+
+    }
+
+    /* The Animation, switch the -100px to +100px to reverse */
+    @-webkit-keyframes backgroundAnimate{
+
+    from{
+    background-position: 50px 0, 50px 0, 0 0, 0 0;
+    }
+
+    to{
+    background-position: 50px -100px, 50px -100px, 0 -100px, 0 -100px;    
+}
 }
 .wrapper {
     min-height: 100%;
@@ -45,7 +68,7 @@ body {
 }
 html {
     scroll-behavior: smooth; 
-  }
+}
 /*--------------------------------------------------------------------------------*/
 
 .main__container {
@@ -60,7 +83,7 @@ html {
 .header__mine {
 }
 .header__container {
-    background: #6d7d85;
+    background: #d7d1c9;
     min-height: 86px;
 }
 @media(max-width:636px){
@@ -87,7 +110,7 @@ html {
     margin: 18px 0px;
 }
 .menu__link {
-    color: white;
+    color: black;
     font-size: 18px;
     font-weight: 300;
     line-height: 50px;
@@ -111,6 +134,12 @@ html {
     padding: 50px 30px 35px;
     border-bottom: 15px solid #d7d1c9;
 }
+@media(max-width:1044px){
+    .person__card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .card__photo {
     width: 200px;
     height: 200px;
@@ -119,6 +148,11 @@ html {
     box-shadow: 0 1px 4px rgb(0 0 0 / 60%);
     filter: grayscale(0.2) brightness(1.05);
 }
+@media(max-width:1044px){
+    .card__photo {
+        margin-bottom: 20px;
+    }
+}
 .card__title {
     display: flex;
     flex-direction: column;
@@ -126,6 +160,15 @@ html {
     align-content: center;
     text-align: center;
     text-transform: uppercase;
+    background-color:#d7d1c9;
+    max-height: 500px;
+    width: 900px;
+    margin-left: 20px;
+}
+@media(max-width:963px){
+    .card__title{
+        width: 600px
+    }
 }
 .card__name {
     position: relative;
@@ -160,7 +203,9 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #f5f4f04b;
 }
+
 .section {
     border-bottom: 1px solid ;
     padding: 10px;
@@ -283,7 +328,7 @@ html {
     display: flex;
     align-items: center;
     white-space: pre-wrap;
-  }
+}
 
 /*----*/
 #English { 
@@ -298,11 +343,20 @@ html {
 .footer__mine {
 }
 .footer__container {
-    background: #6d7d85;
+    background: #d7d1c9;
     min-height: 86px;
     
 }
 .footer__date {
-    color: white;
+    color: black;
     line-height: 5em;
+}
+.rss_logo{
+    width: 80px;
+    margin-top: 30px;
+}
+.footer__links{
+    display: flex;
+    justify-content: space-around;
+
 }
